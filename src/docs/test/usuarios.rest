@@ -1,0 +1,53 @@
+@base=http://localhost:3000/api
+
+### GET
+GET {{base}}/usuarios/
+
+### GET
+GET {{base}}/usuarios/1
+
+### POST
+POST {{base}}/usuarios/auth
+Content-Type: application/json
+
+{
+    "correo": "gustavogarrido.programador@gmail.com",
+    "contraseña": "gustavo1234"
+}
+
+### GET
+GET {{base}}/usuarios/perfil
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsIm5vbWJyZSI6Ikd1c3Rhdm8gR2FycmlkbyIsInVzdWFyaW8iOiJndXNzYWRvbGYiLCJjb3JyZW8iOiJndXN0YXZvZ2Fycmlkby5wcm9ncmFtYWRvckBnbWFpbC5jb20iLCJpYXQiOjE2OTkzMzExMzQsImV4cCI6MTY5OTQxNzUzNH0.yUoJSXPQg3EENs40am_sYIXKbXHQC92lNzfSSSDEgPg
+
+### POST
+POST {{base}}/usuarios/
+Content-Type: application/json
+
+{
+    "nombre":"Gustavo Garrido",
+    "usuario":"gussadolf",
+    "correo":"gustavogarrido.programador@gmail.com",
+    "telefono":"949606615",
+    "direccion":"los carrera 2347",
+    "edad":31,"rut":"17640270-9",
+    "contraseña":"gustavo1234"
+}
+
+### PUT
+PUT {{base}}/usuarios/1
+Content-Type: application/json
+
+{
+    "nombre": "Gustavo Garrido",
+    "usuario": "gussadolf",
+    "correo":"gustavogarrido.programador@gmail.com",
+    "telefono": "949606615",
+    "direccion": "los carrera 2347",
+    "edad": 38,
+    "rut": "17640270-9"
+}
+
+### DELETE
+DELETE {{base}}/usuarios/1
+Content-Type: application/json

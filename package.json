@@ -1,0 +1,30 @@
+{
+  "name": "security_backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "proyecto de autenticacion y otros parametros",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "node --watch --env-file development.env ./src/index.js",
+    "create:dev": "node --env-file development.env ./src/database/actions/create.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "expressjs",
+    "nodejs",
+    "supertest",
+    "postgresql",
+    "migrations"
+  ],
+  "author": "gustavo garrido",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "pg": "^8.11.3",
+    "winston": "^3.11.0"
+  }
+}
